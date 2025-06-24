@@ -131,17 +131,18 @@ void SGame::SetBackground(const std::string& BGpath) {
 	background = std::make_unique<Background>(BGpath);
 }
 
-int SGame::CountOfBricks() const {
-	return bricks.size();
-}
-
 bool SGame::IsEnd() {
 	if (isEnd || PressedKey(VK_ESCAPE)) {
-		return false;
+		if (bricks.size() > 0) {
+			std::cout << "Game over!\n\n";
+		} else {
+			std::cout << "You won!\n\n";
+		}
+
+		return true;
 	}
-	else {
-		return false;
-	}
+
+	return false;
 }
 
 void SGame::Basket() {

@@ -29,7 +29,7 @@ public:
 	void Loop() override;
 	void Start() override;
 
-	int CountOfBricks() const override;
+	//int CountOfBricks() const;
 	bool IsEnd() override;
 
 	

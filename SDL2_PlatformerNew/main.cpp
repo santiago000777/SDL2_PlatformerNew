@@ -13,13 +13,6 @@ int main(int argc, char* args[]) {
 		Game::Get().Loop();
 	}
 
-	if (Game::Get().CountOfBricks() > 0) {
-		std::cout << "Game over!\n\n";
-	}
-	else {
-		std::cout << "You won!\n\n";
-	}
-
 	return 0;
 }
 

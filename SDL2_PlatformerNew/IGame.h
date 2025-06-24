@@ -19,7 +19,6 @@ public:
 					  int posY = SDL_WINDOWPOS_CENTERED, int windowWidth = 800, int windowHeight = 600, int flags = SDL_WINDOW_SHOWN) = 0;
 	virtual void Loop() = 0;
 	virtual void Start() = 0;
-	virtual int CountOfBricks() const = 0;
 	virtual bool IsEnd() = 0;
 
 protected:
